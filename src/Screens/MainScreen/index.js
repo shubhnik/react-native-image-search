@@ -19,7 +19,7 @@ export default class MainScreen extends React.Component{
 
     searchQuery = (page, query) => {
         const emptyData = []
-        this.setState({loading: true, data: emptyData}, this.getImageResults(page, query))
+        this.setState({loading: true, data: emptyData, page: 1}, this.getImageResults(page, query))
     }
 
     getImageResults = ( page, query=this.state.query ) => {
